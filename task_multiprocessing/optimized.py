@@ -20,7 +20,7 @@ def main():
     primes = [str(num) for num, is_prime in zip(numbers, results) if is_prime]
 
     with open(filepath, "w") as f:
-        f.write("\n".join(primes))
+        f.write("\n".join(primes))  # 123
 
 
 if __name__ == "__main__":
