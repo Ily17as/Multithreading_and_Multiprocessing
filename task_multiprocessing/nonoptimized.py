@@ -14,7 +14,8 @@ def main():
             if check_prime(i):
                 if i == 999983:
                     file.write(str(i))
-                file.write(str(i) + "\n")
+                else:
+                    file.write(str(i) + "\n")
 
 
 if __name__ == "__main__":
