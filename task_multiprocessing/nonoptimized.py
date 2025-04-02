@@ -9,12 +9,12 @@ def check_prime(number):
 
 def main():
     filepath = "primes_nonoptimized.txt"
-    primes = []
     with open(filepath, "w") as file:
         for i in range(1, 1000001):
             if check_prime(i):
-                primes.append(str(i))
-            file.write("\n".join(primes))
+                file.write(str(i) + "\n")
+            if i == 999983:
+                file.write(str(i))
 
 
 if __name__ == "__main__":
