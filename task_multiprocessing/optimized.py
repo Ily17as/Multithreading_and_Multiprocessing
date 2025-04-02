@@ -1,4 +1,5 @@
 from multiprocessing import Pool
+import os
 
 
 def check_prime(number):
@@ -11,7 +12,10 @@ def check_prime(number):
 
 
 def main():
-    filepath = "primes_optimized.txt"
+    script_dir = os.path.dirname(__file__)
+    # .. означает "подняться" на один уровень вверх
+    parent_dir = os.path.join(script_dir, "..")
+    filepath = os.path.join(parent_dir, "primes_optimized.txt")
 
     with Pool() as pool:
         numbers = list(range(1, 1000001))
